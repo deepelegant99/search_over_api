@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  TextField,
-  FormControl,
-  FormHelperText,
-  Button,
-} from "@material-ui/core";
+import { TextField, FormControl, Button } from "@material-ui/core";
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -16,9 +11,18 @@ const SearchBar = () => {
   return (
     <>
       <FormControl>
-        <TextField variant="filled" size="medium" onChange={searchHandler} />
-        <FormHelperText>Search for New Classes</FormHelperText>
-        <Button variant="contained" color="primary">
+        <TextField
+          variant="filled"
+          label="Search Events"
+          size="medium"
+          onChange={searchHandler}
+          value={searchValue}
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => setSearchValue("")}
+        >
           Clear
         </Button>
       </FormControl>
