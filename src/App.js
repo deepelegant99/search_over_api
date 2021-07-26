@@ -22,8 +22,10 @@ function App() {
 
   fetch("https://api.jikan.moe/v3/manga/1/characters")
     .then((response) => response.json())
-    .then((data) => {
-      console.log(data["characters"]);
+    .then((data) =>{
+      data['characters'].forEach(element => {
+        console.log(element)
+      });
     });
 
   return (
