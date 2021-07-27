@@ -1,7 +1,7 @@
 import "./App.css";
 import SearchBar from "./components/SearchBar";
 import DisplayList from "./components/DisplayList";
-import React, { useS } from "react";
+import React, { useState } from "react";
 
 function App() {
   const topJobs = [
@@ -18,21 +18,21 @@ function App() {
     "Front End Engineer",
   ];
 
-  let list = [];
+  const [names, setNames]=useState([])
 
   fetch("https://api.jikan.moe/v3/manga/1/characters")
     .then((response) => response.json())
     .then((data) =>{
-      data['characters'].forEach(element => {
-        console.log(element)
-      });
+      setNames(data.characters.map((item)=>{
+        return item.name
+      }));
     });
 
   return (
     <div className="App">
       <header>
         <SearchBar />
-        <DisplayList list={list} />
+        <DisplayList list={names} />
       </header>
     </div>
   );
