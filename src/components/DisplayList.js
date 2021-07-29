@@ -6,9 +6,11 @@ const DisplayList = ({list}) => {
       {list.map((dic) => {
         return (
           <>
-            <div>{dic.name}</div>
-            <div>{dic.role}</div>
-            <div>{dic.url}</div>
+            <div>Name: {dic.name}</div>
+            <div>Role: {dic.role}</div>
+            <div>URL:  {dic.url}</div>
+            <div>Image URL: {dic.image_url}</div>
+            <br />
           </>
         );
       })}
