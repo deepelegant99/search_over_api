@@ -6,9 +6,9 @@ const Card = ({ name, role, url, image_url }) => {
       <div>
         <img src={image_url} alt={"some"} />
       </div>
-      <div>{name}</div>
-      <div>{role}</div>
-      <div>{url}</div>
+      <div>Name: {name}</div>
+      <div>Role: {role}</div>
+      <div>URL: {url}</div>
     </>
   );
 };
