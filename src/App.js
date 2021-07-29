@@ -31,16 +31,7 @@ function App() {
     fetch("https://api.jikan.moe/v3/manga/1/characters")
       .then((response) => response.json())
       .then((data) => {
-        setNames(
-          data.characters.map((dic) => {
-            return (
-              <div>
-                `name: ${dic.name} role: ${dic.role} image_url: ${dic.image_url}{" "}
-                url: ${dic.url} `
-              </div>
-            );
-          })
-        );
+        setNames(data.characters)
       });
   }, []);
 
@@ -49,7 +40,18 @@ function App() {
       <header>
         <SearchBar />
         <DisplayList list={names} />
-        <Card name={"Phillip"} role ={"Main"} url={"Some URL"} image_url={"Some image URL"} /> 
+        {/* <Card name={"Phillip"} role ={"Main"} url={"Some URL"} image_url={"Some image URL"} />  */}
+        {/* {names.map(
+          (dic)=>{
+            return (
+              <>
+                <div>{dic.name}</div>
+                <div>{dic.role}</div>
+                <div>{dic.url}</div>
+              </>
+            );
+          }
+        )} */}
       </header>
     </div>
   );
