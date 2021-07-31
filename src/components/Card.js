@@ -14,7 +14,9 @@ const Card = ({ name, role, url, image_url }) => {
             <label>{role}</label>
           </div>
           <div>
-            <button src={url}>URL</button>
+          <form method="GET" action={url}>
+            <button>URL</button>
+            </form>
           </div>
         </div>
       </card>
