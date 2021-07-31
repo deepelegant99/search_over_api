@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const DisplayList = ({ list }) => {
   return (
-    <div>
+    <div className="gallery">
       {list.map((dic) => {
         return (
           <Card

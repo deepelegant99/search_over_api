@@ -1,4 +1,51 @@
-body{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   text-align: center;
 }
 
+.gallery {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+card {
+  background-color: aqua;
+  width: 250px;
+  margin: auto;
+  margin: 5px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+card img {
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+card .menu {
+  margin: 7px;
+  padding: 3px;
+  background-color: rgb(231, 231, 23);
+  border: blue solid 3px;
+  border-radius: 15px;
+}
+
+card .menu button {
+  width: 100px;
+
+  border: blue solid 3px;
+  border-radius: 5px;
+}
