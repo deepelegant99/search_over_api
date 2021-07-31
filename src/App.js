@@ -8,7 +8,7 @@ function App() {
   const [names, setNames] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.jikan.moe/v3/manga/1/characters")
+    fetch("https://api.jikan.moe/v3/manga/2/characters")
       .then((response) => response.json())
       .then((data) => {
         setNames(data.characters);
