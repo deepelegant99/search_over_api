@@ -17,10 +17,10 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <>
         <SearchBar />
         <DisplayList list={names} />
-      </header>
+      </>
     </div>
   );
 }
