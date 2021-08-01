@@ -21,7 +21,7 @@ function App() {
     fetch("https://api.jikan.moe/v3/search/anime?q=Dragon%Ball")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.results);
       });
   }, []);
 
