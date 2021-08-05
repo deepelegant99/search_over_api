@@ -30,6 +30,10 @@ card {
   flex-shrink: 0;
 }
 
+card:hover{
+  margin-top: -5px;
+}
+
 card img {
   margin-top: 5px;
   border-radius: 20px;

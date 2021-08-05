@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { TextField, FormControl, Button } from "@material-ui/core";
 
-const SearchBar = () => {
+const SearchBar = ({setSearch}) => {
   const [searchValue, setSearchValue] = useState("");
 
   const searchHandler = (e) => {
     setSearchValue(e.target.value);
+    setSearch(searchValue);
   };
 
   const displayClear = searchValue.length === 0;
