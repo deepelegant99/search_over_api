@@ -8,12 +8,25 @@ function App() {
   const [names, setNames] = useState([]);
   const [search, setSearch] = useState("");
 
+  // useEffect(() => {
+  //   fetch("https://api.jikan.moe/v3/manga/2/characters")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setNames(data.characters);
+  //     });
+  // }, []);
+
   useEffect(() => {
     if (search.length > 0) {
       fetch(`https://api.jikan.moe/v3/search/manga?q=${search}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data.results);
+          const manga_id = data.results[0].mal_id;
+          fetch(`https://api.jikan.moe/v3/manga/${manga_id}/characters`)
+            .then((response) => response.json())
+            .then((data) => {
+              setNames(data.characters);
+            });
         });
     }
   }, [search]);
