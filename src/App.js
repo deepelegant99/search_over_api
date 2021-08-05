@@ -6,19 +6,22 @@ import Card from "./components/Card";
 
 function App() {
   const [names, setNames] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("https://api.jikan.moe/v3/manga/2/characters")
-      .then((response) => response.json())
-      .then((data) => {
-        setNames(data.characters);
-      });
-  }, []);
+    if (search.length > 0) {
+      fetch(`https://api.jikan.moe/v3/search/anime?q=${search}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.results);
+        });
+    }
+  }, [search]);
 
   return (
     <div className="App">
       <>
-        <SearchBar />
+        <SearchBar setSearch={setSearch} />
         <DisplayList list={names} />
       </>
     </div>
