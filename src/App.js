@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     if (search.length > 0) {
-      fetch(`https://api.jikan.moe/v3/search/anime?q=${search}`)
+      fetch(`https://api.jikan.moe/v3/search/manga?q=${search}`)
         .then((response) => response.json())
         .then((data) => {
           console.log(data.results);
