@@ -3,6 +3,7 @@ import SearchBar from "./components/SearchBar";
 import DisplayList from "./components/DisplayList";
 import React, { useEffect, useState } from "react";
 import Card from "./components/Card";
+import Header from "./components/Header";
 
 function App() {
   const [names, setNames] = useState([]);
@@ -28,13 +29,23 @@ function App() {
               setNames(data.characters);
             });
         });
+    }else{
+      return (
+        <div>
+            Please enter Anime Title
+        </div>
+      );    
     }
   }, [search]);
 
   return (
     <div className="App">
       <>
-        <SearchBar setSearch={setSearch} />
+        <Header setSearch={setSearch}/>
+        <div className="ah2">
+          <SearchBar setSearch={setSearch}/>
+          <br/>
+        </div>
         <DisplayList list={names} />
       </>
     </div>
