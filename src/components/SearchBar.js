@@ -44,7 +44,7 @@ const SearchBar = ({setSearch}) => {
           </Button>
         )}
       </FormControl>
-      <h1>{searchValue}</h1>
+      <h1></h1>
     </>
   );
 };
