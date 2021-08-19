@@ -20,7 +20,7 @@ const SearchBar = ({setSearch}) => {
       <FormControl>
         <TextField
           variant="filled"
-          label="Search Events"
+          label="Search Anime"
           size="medium"
           onChange={searchHandler}
           value={searchValue}
@@ -44,7 +44,7 @@ const SearchBar = ({setSearch}) => {
           </Button>
         )}
       </FormControl>
-      <h1>{searchValue}</h1>
+      <h1></h1>
     </>
   );
 };

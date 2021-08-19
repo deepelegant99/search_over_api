@@ -8,6 +8,28 @@ body {
   text-align: center;
 }
 
+.ah1{
+  color:white;
+  background-color: blue;
+  font-size: xxx-large;
+  font-weight: bolder;
+  padding: 30px;
+  margin: 0;
+}
+
+.ah1 h1{
+  font-size:x-large;
+
+  color: white;
+}
+
+.ah2{
+  background-color: lightblue;
+  margin: 0;
+}
+
+
+
 .gallery {
   display: flex;
   /* justify-content: space-between; */
@@ -53,3 +75,4 @@ card .menu button {
   border: blue solid 3px;
   border-radius: 5px;
 }
+
